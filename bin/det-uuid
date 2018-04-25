@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+const uuid = require("uuid/v4")
+const cb = require("clipboardy")
+
+cb.writeSync(uuid())
+console.log(cb.readSync())
