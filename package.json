@@ -1,0 +1,18 @@
+{
+  "name": "dev-tools",
+  "version": "0.1.0",
+  "description": "det: a bunch of scripts for development",
+  "main": "bin/det",
+  "repository": "git@github.com:esturcke/dev-tools.git",
+  "author": "Erik J. Sturcke <erik@sturcke.co>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "clipboardy": "^1.2.3",
+    "commander": "^2.15.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "prettier": "^1.12.1",
+    "uuid": "^3.2.1"
+  }
+}
