@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+const { execSync } = require("child_process")
+const cb = require("clipboardy")
+const invariant = require("invariant")
+const chalk = require("chalk")
+const config = require("../lib/config")
+
+const password = config("softoken.pin")
+if (password == null) {
+  console.log(
+    chalk`{red No password specified in 'det.json'. Please add 'softoken.pin'.}`
+  )
+  process.exit(1)
+}
+
+cb.writeSync(
+  execSync(
+    `echo ${password} | "/Applications/SofToken II.app/Contents/Resources/st-wrap.sh" -p`
+  ).toString()
+)
