@@ -16,5 +16,5 @@ if (password == null) {
 cb.writeSync(
   execSync(
     `echo ${password} | "/Applications/SofToken II.app/Contents/Resources/st-wrap.sh" -p`
-  ).toString()
+  ).toString().trim()
 )
